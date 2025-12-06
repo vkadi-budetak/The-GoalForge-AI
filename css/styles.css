@@ -1,0 +1,66 @@
+:root {
+    --primary-font: 'Roboto', sans-serif;
+
+    /* Text colors */
+    --main-txt-cl: #000000;
+
+}
+
+/* Base styles */
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 20px;
+    line-height: 1.67;
+    letter-spacing: 0.02em;
+    color: var(--main-txt-cl);
+}
+
+/* Reset Star */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.link {
+    color: currentColor;
+    text-decoration: none
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    font-family: inherit;
+    color: currentColor;
+    cursor: pointer;
+}
+
+li:last-child_ {
+    margin-bottom: 0;
+}
+
+/* < -- огорнути ним header */
+.page-box {
+    overflow: hidden;
+}
+
+/* Reset End */

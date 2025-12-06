@@ -7,6 +7,12 @@
     <title>The Goal Forge AI</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="./img/Favicon/Favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital@0;1&family=Oswald:wght@700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap"
+        rel="stylesheet">
     <!-- Normalize styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css">
     <!-- Custom styles -->
@@ -16,36 +22,210 @@
 
 <body>
     <!-- Header section -->
-    <header>
-        <div>
-            <div>
-                <a href="">
-                    <img src="logo.png" alt="Logo">
+    <header class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <a class="header-logo-link link" href="">
+                    <img class="header-logo-img" src="/img/logo.png" alt="Logo">
                 </a>
             </div>
-            <div>
-                <nav>
-                    <ul>
-                        <li><a href="#hero">Hero</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
+            <div class="header-container-nav">
+                <nav class="header-nav">
+                    <ul class="header-nav-list list">
+                        <li class="header-nav-item"><a class="header-nav-link link" href="#hero">Hero</a></li>
+                        <li class="header-nav-item"><a class="header-nav-link link" href="#about">About</a></li>
+                        <li class="header-nav-item"><a class="header-nav-link link" href="#services">Services</a></li>
                     </ul>
                 </nav>
-                <div>
-                    <ul>
-                        <li>
-                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
-                                aria-label="facebook icon">
-                                <svg width="24px" height="24px">
-                                    <use href=""></use>
+                <div class="header-shoplink">
+                    <ul class="header-shoplink-list list">
+                        <li class="header-shoplink-item">
+                            <a class="header-shoplink-link link" href="https://www.instagram.com/" target="_blank"
+                                rel="noopener noreferrer" aria-label="facebook icon">
+                                <svg class="header-shoplink-svg" width="24px" height="24px">
+                                    <use href="./img/Intagram-logo.svg"></use>
                                 </svg>
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"
-                                aria-label="youtube icon">
-                                <svg width="24px" height="24px">
-                                    <use href=""></use>
+                        <li class="header-shoplink-item">
+                            <a class="header-shoplink-link link" href="./" target="_blank" rel="noopener noreferrer"
+                                aria-label="search icon">
+                                <svg class="header-shoplink-svg" width="24px" height="24px">
+                                    <use href="./img/Search-logo.svg"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="header-shoplink-item">
+                            <a class="header-shoplink-link link" href="./" target="_blank" rel="noopener noreferrer"
+                                aria-label="shop icon">
+                                <svg class="header-shoplink-svg" width="24px" height="24px">
+                                    <use href="./img/shop-logo.svg"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <!-- Hero section -->
+        <section class="hero" id="hero">
+            <div class="hero-container">
+                <div class="hero-box">
+                    <h1 class="hero-title">Turn your biggest 'I want...' into a powerful action plan.</h1>
+                    <p class="hero-desc">Utilizing state-of-the-art AI to structure, detail, and actualize your goals in
+                        4 focused steps.
+                    </p>
+                    <p class="hero-subtitle">Ready to forge your goal? Start by telling the AI what you want.</p>
+                    <button class="hero-btn" type="button">Get Started</button>
+                </div>
+                <img class="hero-img" src="/img/Hero/image1.png" alt="picture kart">
+            </div>
+        </section>
+
+        <!-- Social Proof section -->
+        <section class="social-proof" id="about">
+            <h2 class="social-proof-title">Goal Achieved: Hear From Our Community</h2>
+            <p class="social-proof-subtitle">The GoalForge AI platform has empowered hundreds of users to move past
+                procrastination and implement
+                measurable,
+                structured action plans. We turn aspirations into reality by providing clarity and confidence at every
+                step.</p>
+            <h3 class="social-proof-subject">Success Stories That Forge Confidence</h3>
+            <div class="social-proof-box">
+                <ul class="social-proof-list list">
+                    <li class="social-proof-item">
+                        <img class="social-proof-img" src="./img/SocialProof/SocialProof1.png" alt="pictures">
+                        <p class="social-proof-txt">Liam K. <span class="social-proof-desc">(Melbourne,
+                                Australia)</span></p>
+                        <p class="social-proof-feedback">"My goal was 'save for a new PC.' GoalForge AI didn't just tell
+                            me to save; it used the
+                            'Actualization' step to find
+                            three of the best high-yield savings accounts available right now. That real-time data made
+                            all the difference."</p>
+                    </li>
+                    <li class="social-proof-item">
+                        <img class="social-proof-img" src="./img/SocialProof/SocialProof13.png" alt="pictures">
+                        <p class="social-proof-txt">Sarah M. <span class="social-proof-desc">(London, UK)</span></p>
+                        <p class="social-proof-feedback">"Starting my online craft store was intimidating. The AI took
+                            my vague business idea and
+                            instantly provided 7 key
+                            implementation phases, complete with actionable first-week steps. I launched in 8 weeks!"
+                        </p>
+                    </li>
+                    <li class="social-proof-item">
+                        <img class="social-proof-img" src="./img/SocialProof/SocialProof12.png" alt="pictures">
+                        <p class="social-proof-txt">Omar T. <span class="social-proof-desc">(Toronto, Canada)</span></p>
+                        <p class="social-proof-feedback">"I wanted to learn advanced Python, but felt overwhelmed by the
+                            curriculum. GoalForge AI
+                            structured my entire 3-month
+                            learning path into clear weekly tasks. It felt less like a chore and more like a simple
+                            checklist."</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Input section -->
+        <section class="input" id="services">
+            <div class="input-container">
+                <div class="input-box-form">
+                    <form class="input-form" action="">
+                        <label for="user-idea">What is your big goal?</label>
+                        <textarea id="user-idea"
+                            placeholder="e.g., 'I want to launch a small online business by March,' or 'I want to master Python programming in 6 months.'"></textarea>
+                        <p class="input-text">
+                            Be specific about your desired outcome and timeframe for the best results!
+                        </p>
+
+                        <button class="input-btn" type="button">
+                            1. Forge My Options (Start Brainstorming)
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Input subsection 1 -->
+                <div class="input-sub" hidden>
+                    <img class="input-img" src="./img/InputSection/Rectangle1.png" alt="picture">
+                    <div>
+                        <h3 class="input-title">1. Idea Forge: Brainstorming Your Options</h3>
+                        <div>
+                            <!-- Вивід Ші -->
+                        </div>
+                        <p class="input-txt">The AI has successfully applied creative synthesis to generate distinct
+                            approaches.</p>
+                        <button class="input-sub-btn" tupe="button">Structure This Plan (Proceed to Step 2)</button>
+                    </div>
+
+                </div>
+
+                <!-- Input subsection 2 -->
+                <div class="input-sub" hidden>
+                    <img class="input-img" src="./img/InputSection/Rectangle2.png" alt="picture">
+                    <div>
+                        <h3 class="input-title">1. Idea Forge: Brainstorming Your Options</h3>
+                        <div>
+                            <!-- Вивід Ші -->
+                        </div>
+                        <p class="input-txt">The AI has successfully applied creative synthesis to generate distinct
+                            approaches.</p>
+                        <button class="input-sub-btn" tupe="button">Structure This Plan (Proceed to Step 3)</button>
+                    </div>
+
+                </div>
+
+                <!-- Input subsection 3 -->
+                <div class="input-sub" hidden>
+                    <img class="input-img" src="./img/InputSection/Rectangle3.png" alt="picture">
+                    <div>
+                        <h3 class="input-title">1. Idea Forge: Brainstorming Your Options</h3>
+                        <div>
+                            <!-- Вивід Ші -->
+                        </div>
+                        <p class="input-txt">The AI has successfully applied creative synthesis to generate distinct
+                            approaches.</p>
+                        <button class="input-sub-btn" tupe="button">Structure This Plan (Proceed to Step 4)</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <a class="footer-link" href="">
+                    <img class="footer-img" src="/img/logo.png" alt="Logo">
+                </a>
+
+                <div class="footer-box-social">
+                    <ul class="footer-list list">
+                        <li class="footer-list-item">
+                            <a class="footer-social-link link" href="https://www.instagram.com/" target="_blank"
+                                rel="noopener noreferrer" aria-label="facebook icon">
+                                <svg class="footer-svg" width="24px" height="24px">
+                                    <use href="./img/Intagram-logo.svg"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a class="footer-social-link link" href="https://x.com/" target="_blank"
+                                rel="noopener noreferrer" aria-label="twitter icon">
+                                <svg class="footer-svg" width="24px" height="24px">
+                                    <use href="./img/twitter_logo.svg"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a class="footer-social-link link" href="https://www.facebook.com/" target="_blank"
+                                rel="noopener noreferrer" aria-label="facebook icon">
+                                <svg class="footer-svg" width="24px" height="24px">
+                                    <use href="./img/facebook_logo.svg"></use>
                                 </svg>
                             </a>
                         </li>
@@ -53,30 +233,21 @@
                 </div>
             </div>
 
+            <div class="footer-pub">
+                <ul class="footer-pub-list list">
+                    <li class="footer-pub-item">ABOUT</li>
+                    <li class="footer-pub-item">About Us</li>
+                    <li class="footer-pub-item">Privacy Policy</li>
+                    <li class="footer-pub-item">Terms and Conditions</li>
+                    <li class="footer-pub-item">Write for Us</li>
+                </ul>
+            </div>
 
+            <p class="footer-pub-txt">The Goal Forge AI © 2026</p>
 
         </div>
 
-    </header>
-    <main></main>
-    <!-- Hero section -->
-    <section id="hero"></section>
-    <!-- About section -->
-    <section id="about"></section>
-    <!-- Services section -->
-    <section id="services"></section>
-    <!-- Portfolio section -->
-    <section></section>
-    <!-- Contact section -->
-    <section></section>
-    <!-- Testimonials section -->
-    <section></section>
-    <!-- Blog section -->
-    <section></section>
-    <!-- FAQ section -->
-    <section></section>
-    <!-- Footer section -->
-    <footer></footer>
+    </footer>
 </body>
 
 </html>
