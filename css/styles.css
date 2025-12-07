@@ -3,14 +3,22 @@
 
     /* Text colors */
     --main-txt-cl: #000000;
+    --footer-txt-cl: #ffffff;
     --btn-txt-cl: #ffffff;
+    --color-primary-dark-text: #1f2937;
+    --color-light-accent: #e5e4e2;
+    /* Дуже світлий індиго */
+    --color-primary-indigo: #d2cfcb;
+    --color-gray-hint: #6b7280;
 
     /* Bg colors */
     --bg-color-fon: #F0EFEB;
     --bg-color-btn: #000000;
     --bg-color-focus-btn: tomato;
+    --bg-color-footer: #020202;
 
-
+    /* Other */
+    --transition: background-color 0.5s;
 }
 
 /* Base styles */
@@ -66,7 +74,6 @@ li:last-child_ {
     margin-bottom: 0;
 }
 
-/* < -- огорнути ним header */
 .page-box {
     overflow: hidden;
 }
@@ -82,8 +89,8 @@ li:last-child_ {
     padding-right: 15px;
 
 
-    outline: 2px solid red;
-    outline-offset: -2px;
+    /* outline: 2px solid red;
+    outline-offset: -2px; */
 }
 
 /* Tablet 690 styles & > */
@@ -111,9 +118,6 @@ li:last-child_ {
   | Header section
   |============================
 */
-
-.header {}
-
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -122,32 +126,12 @@ li:last-child_ {
     height: 68px;
 }
 
-.container {}
-
-.header-logo {}
-
-.header-logo-link {}
-
-.link {}
-
-.header-logo-img {}
-
-.header-container-nav {}
-
-.header-nav {}
-
 .header-nav-list {
     display: flex;
     align-items: center;
     gap: 16px;
     padding: 8px;
 }
-
-.header-nav-item {}
-
-.header-nav-link {}
-
-.header-shoplink {}
 
 .header-shoplink-list {
     display: flex;
@@ -156,34 +140,31 @@ li:last-child_ {
     padding: 8px;
 }
 
-.header-shoplink-item {}
-
-.header-shoplink-link {}
-
-.header-shoplink-svg {}
-
 
 /**
   |============================
   | Hero section
   |============================
 */
-.hero {}
+.hero {
+    background-color: var(--bg-color-fon);
+}
 
 .hero-container {
-    background-color: var(--bg-color-fon);
     display: flex;
     gap: 25px;
     padding-top: 90px;
+    padding-bottom: 90px;
 }
 
-.container {}
 
 .hero-box {
     width: 590px;
 }
 
-.hero-title {}
+.hero-title {
+    width: 580px;
+}
 
 .hero-desc {
     padding-top: 20px;
@@ -201,6 +182,7 @@ li:last-child_ {
     background-color: var(--bg-color-btn);
     color: var(--btn-txt-cl);
     border: 1px solid var(--bg-color-fon);
+    transition: var(--transition);
 }
 
 .hero-btn:hover,
@@ -210,6 +192,195 @@ li:last-child_ {
     font-size: 19px;
     background-color: var(--bg-color-focus-btn);
     color: var(--main-txt-cl);
+    transition: var(--transition);
 }
 
-.hero-img {}
+.hero-box-img {
+    width: 500px;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/**
+  |============================
+  | Social Proof
+  |============================
+*/
+.social-proof-container {
+    padding-top: 60px;
+}
+
+.social-proof-container-title {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 700px;
+}
+
+.social-proof-title {
+    font-size: 36px;
+
+}
+
+.social-proof-subtitle {
+    padding-top: 26px;
+    font-size: 16px;
+}
+
+.social-proof-subject {
+    font-size: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.social-proof-box {
+    padding-top: 88px;
+}
+
+.social-proof-list {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    padding-top: 52px;
+    padding-bottom: 98px;
+    font-size: 17px;
+    margin-top: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.social-proof-item {
+    width: 316px;
+}
+
+.social-proof-img {
+    border-radius: 6%;
+}
+
+.social-proof-txt {
+    padding-top: 26px;
+}
+
+.social-proof-feedback {
+    padding-top: 20px;
+    font-size: 12px;
+    padding-bottom: 52px;
+}
+
+/**
+  |============================
+  | Input section
+  |============================
+*/
+.input-box-form {
+    padding: 16px;
+    background-color: var(--color-light-accent);
+
+    border-left: 4px solid var(--bg-color-fon);
+    border-radius: 12px;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+
+    margin: 32px 0 32px;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-form label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#user-idea {
+    width: 100%;
+    min-height: 80px;
+    padding: 12px;
+    border: 1px solid var(--color-gray-hint);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+
+#user-idea:focus {
+    border-color: var(--color-primary-indigo);
+    box-shadow: 0 0 0 3px rgba(99, 98, 107, 0.5);
+    outline: none;
+}
+
+.input-text {
+    font-size: 14px;
+    color: var(--color-gray-hint);
+    margin-top: -8px;
+    margin-bottom: 8px;
+}
+
+.input-btn {
+    width: 100%;
+    padding: 12px 24px;
+    background-color: var(--color-primary-indigo);
+    color: white;
+    font-weight: 700;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.input-btn:hover {
+    background-color: var(--bg-color-focus-btn);
+    transition: var(--transition);
+}
+
+/* Адаптивність: Кнопка на десктопі може бути меншою (якщо використовуєте медіазапити) */
+@media (min-width: 768px) {
+    .input-btn {
+        width: auto;
+    }
+}
+
+/**
+  |============================
+  | Footer section
+  |============================
+*/
+.footer {
+    background-color: var(--bg-color-footer);
+}
+
+.footer-container {
+    color: var(--footer-txt-cl);
+}
+
+.footer-box {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+
+.footer-img {
+    width: 150px;
+}
+
+
+.footer-list {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-pub-txt {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 16px;
+    font-size: 12px;
+}
