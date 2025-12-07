@@ -3,6 +3,13 @@
 
     /* Text colors */
     --main-txt-cl: #000000;
+    --btn-txt-cl: #ffffff;
+
+    /* Bg colors */
+    --bg-color-fon: #F0EFEB;
+    --bg-color-btn: #000000;
+    --bg-color-focus-btn: tomato;
+
 
 }
 
@@ -52,6 +59,7 @@ button {
     font-family: inherit;
     color: currentColor;
     cursor: pointer;
+    font-size: 17px;
 }
 
 li:last-child_ {
@@ -64,3 +72,144 @@ li:last-child_ {
 }
 
 /* Reset End */
+.container {
+    /* Phone styles & > */
+    min-width: 320px;
+    max-width: 448px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+
+    outline: 2px solid red;
+    outline-offset: -2px;
+}
+
+/* Tablet 690 styles & > */
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* Desktop styles & > */
+@media only screen and (min-width: 1140px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+
+/**
+  |============================
+  | Header section
+  |============================
+*/
+
+.header {}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    height: 68px;
+}
+
+.container {}
+
+.header-logo {}
+
+.header-logo-link {}
+
+.link {}
+
+.header-logo-img {}
+
+.header-container-nav {}
+
+.header-nav {}
+
+.header-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px;
+}
+
+.header-nav-item {}
+
+.header-nav-link {}
+
+.header-shoplink {}
+
+.header-shoplink-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px;
+}
+
+.header-shoplink-item {}
+
+.header-shoplink-link {}
+
+.header-shoplink-svg {}
+
+
+/**
+  |============================
+  | Hero section
+  |============================
+*/
+.hero {}
+
+.hero-container {
+    background-color: var(--bg-color-fon);
+    display: flex;
+    gap: 25px;
+    padding-top: 90px;
+}
+
+.container {}
+
+.hero-box {
+    width: 590px;
+}
+
+.hero-title {}
+
+.hero-desc {
+    padding-top: 20px;
+}
+
+.hero-subtitle {
+    padding-top: 158px;
+    font-size: 14px;
+}
+
+.hero-btn {
+    margin-top: 16px;
+    padding: 8px;
+    border-radius: 50% 20% / 10% 40%;
+    background-color: var(--bg-color-btn);
+    color: var(--btn-txt-cl);
+    border: 1px solid var(--bg-color-fon);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+    border-radius: 50% 20% / 10% 40%;
+    border: 1px solid var(--bg-color-fon);
+    font-size: 19px;
+    background-color: var(--bg-color-focus-btn);
+    color: var(--main-txt-cl);
+}
+
+.hero-img {}
