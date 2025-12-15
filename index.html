@@ -51,13 +51,18 @@
                         <li class="header-shoplink-item">
                             <a class="header-shoplink-link link" href="./" target="_blank" rel="noopener noreferrer"
                                 aria-label="search icon">
-                                <span class="header-shoplink-span">&#128270;</span>
+                                <svg class="header-shoplink-svg" width="21px" height="21px">
+                                    <use href="./img/search_icon.svg"></use>
+                                </svg>
                             </a>
+
                         </li>
                         <li class="header-shoplink-item">
                             <a class="header-shoplink-link link" href="./" target="_blank" rel="noopener noreferrer"
                                 aria-label="shop icon">
-                                <span class="header-shoplink-span">&#128722;</span>
+                                <svg class="header-shoplink-svg" width="21px" height="21px">
+                                    <use href="./img/shop_icon.svg"></use>
+                                </svg>
 
                             </a>
                         </li>
@@ -196,44 +201,50 @@
                             </button>
                         </form>
                     </div>
-                    <!-- Input subsection 1 -->
-                    <div class="input-sub" hidden>
-                        <img class="input-img" src="./img/InputSection/Rectangle1.png" alt="picture">
-                        <div>
-                            <h3 class="input-title">1. Idea Forge: Brainstorming Your Options</h3>
-                            <div>
-                                <!-- Вивід Ші -->
+                    <!-- Input subsection 1 hidden -->
+
+
+                    <div class="input-sub step-card-container" id="step-1-card">
+                        <img class="input-img" src="./img/InputSection/Rectangle1.png"
+                            alt="Візуалізація генерації ідей">
+                        <div class="card-body">
+                            <h3 class="input-title card-title">1. Idea Forge: Brainstorming Your Options</h3>
+                            <div id="step-1-loading" class="loading-state">
+                                <p class="loading-text">Forging 5 unique paths for your goal...</p>
                             </div>
-                            <p class="input-txt">The AI has successfully applied creative synthesis to generate distinct
-                                approaches.</p>
-                            <button class="input-sub-btn" tupe="button">Structure This Plan (Proceed to Step 2)</button>
+                            <div id="step-1-content" class="card-content" style="display: none;">
+                                <div id="idea-list-output" class="ai-output-area">
+                                </div>
+                                <p class="input-txt content-description">
+                                    The AI has successfully applied creative synthesis to generate distinct approaches.
+                                    <br>
+                                    **Please select one approach below to proceed.**
+                                </p>
+                                <div class="selection-box">
+                                    <label for="chosen-idea-select" class="selection-label">Select your chosen
+                                        path:</label>
+                                    <select id="chosen-idea-select" class="selection-dropdown">
+                                        <option value="" disabled selected>— Select an Idea to Structure —</option>
+                                    </select>
+                                </div>
+                                <button class="input-sub-btn next-step-btn" id="step-1-button" type="button" disabled>
+                                    2. Structure This Plan (Proceed to Step 2)
+                                </button>
+                            </div>
+
                         </div>
                     </div>
+
+
+
+
                     <!-- Input subsection 2 -->
-                    <div class="input-sub" hidden>
+                    <div class="input-sub">
                         <img class="input-img" src="./img/InputSection/Rectangle2.png" alt="picture">
-                        <div>
-                            <h3 class="input-title">1. Idea Forge: Brainstorming Your Options</h3>
-                            <div>
-                                <!-- Вивід Ші -->
-                            </div>
-                            <p class="input-txt">The AI has successfully applied creative synthesis to generate distinct
-                                approaches.</p>
-                            <button class="input-sub-btn" tupe="button">Structure This Plan (Proceed to Step 3)</button>
-                        </div>
                     </div>
                     <!-- Input subsection 3 -->
-                    <div class="input-sub" hidden>
+                    <div class="input-sub">
                         <img class="input-img" src="./img/InputSection/Rectangle3.png" alt="picture">
-                        <div>
-                            <h3 class="input-title">1. Idea Forge: Brainstorming Your Options</h3>
-                            <div>
-                                <!-- Вивід Ші -->
-                            </div>
-                            <p class="input-txt">The AI has successfully applied creative synthesis to generate distinct
-                                approaches.</p>
-                            <button class="input-sub-btn" tupe="button">Structure This Plan (Proceed to Step 4)</button>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -243,33 +254,41 @@
         <footer class="footer">
             <div class="footer-container container">
                 <div class="footer-box">
-                    <div>
+                    <div class="footer-box-container">
                         <a class="footer-link" href="">
-                            <img class="footer-img" src="/img/logo.png" alt="Logo">
+                            <img class="footer-img" src="/img/logo.png" alt="Logo" width="100px" height="100px">
                         </a>
                         <div class="footer-box-social">
                             <ul class="footer-list list">
                                 <li class="footer-list-item">
                                     <a class="footer-social-link link" href="https://www.instagram.com/" target="_blank"
                                         rel="noopener noreferrer" aria-label="facebook icon">
-                                        <svg class="footer-svg" width="24px" height="24px">
-                                            <use href="./img/Intagram-logo.svg"></use>
+                                        <svg class="footer-svg" width="21px" height="21px">
+                                            <use href="./img/instagram-logo-icon.svg"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="footer-list-item">
                                     <a class="footer-social-link link" href="https://x.com/" target="_blank"
                                         rel="noopener noreferrer" aria-label="twitter icon">
-                                        <svg class="footer-svg" width="24px" height="24px">
-                                            <use href="./img/twitter_logo.svg"></use>
+                                        <svg class="footer-svg" width="21px" height="21px">
+                                            <use href="./img/x-logo-icon.svg"></use>
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="footer-list-item">
                                     <a class="footer-social-link link" href="https://www.facebook.com/" target="_blank"
                                         rel="noopener noreferrer" aria-label="facebook icon">
-                                        <svg class="footer-svg" width="24px" height="24px">
-                                            <use href="./img/facebook_logo.svg"></use>
+                                        <svg class="footer-svg" width="21px" height="21px">
+                                            <use href="./img/facebook-logo-icon.svg"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="footer-list-item">
+                                    <a class="footer-social-link link" href="https://www.youtube.com/" target="_blank"
+                                        rel="noopener noreferrer" aria-label="youtube icon">
+                                        <svg class="footer-svg" width="21px" height="21px">
+                                            <use href="./img/youtube-logo-icon.svg"></use>
                                         </svg>
                                     </a>
                                 </li>

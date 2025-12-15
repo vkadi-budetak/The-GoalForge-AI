@@ -144,6 +144,11 @@ li:last-child_ {
     padding: 8px;
 }
 
+.header-shoplink-svg:hover,
+.header-shoplink-svg:focus {
+    fill: var(--bg-color-focus-btn);
+}
+
 
 /**
   |============================
@@ -440,6 +445,21 @@ li:last-child_ {
     padding-bottom: 36px;
 }
 
+.footer-box-container {
+    align-items: center;
+    display: flex;
+    /* gap: 46px; */
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.footer-link {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+
 .footer-img {
     width: 150px;
 }
@@ -447,11 +467,18 @@ li:last-child_ {
 
 .footer-list {
     display: flex;
-    gap: 12px;
+    gap: 18px;
+    fill: var(--footer-txt-cl);
+}
+
+.footer-svg:hover,
+.footer-svg:focus {
+    fill: var(--bg-color-focus-btn);
 }
 
 .footer-pub-item {
     font-size: 14px;
+    padding: 6px;
 }
 
 
@@ -460,5 +487,142 @@ li:last-child_ {
     margin-right: auto;
     text-align: center;
     padding-bottom: 16px;
-    font-size: 12px;
+    font-size: 10px;
+}
+
+
+/*  */
+
+/* ----- 1. ЗАГАЛЬНА СТИЛІЗАЦІЯ КАРТКИ (.step-card-container) ----- */
+.step-card-container {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    /* Легка, помітна тінь */
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    /* ЗВЕРНІТЬ УВАГУ: Картка має бути прихована за замовчуванням */
+    display: none;
+}
+
+.card-header {
+    border-bottom: 2px solid #eef2ff;
+    /* Світла лінія-розділювач */
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    /* text-2xl */
+    font-weight: 700;
+    /* bold */
+    color: var(--color-primary-dark-text);
+    /* #1f2937 */
+}
+
+/* ----- 2. СТИЛІЗАЦІЯ ВМІСТУ І ЗГЕНЕРОВАНОГО ТЕКСТУ ----- */
+.content-description {
+    font-size: 1rem;
+    color: var(--color-gray-hint);
+    /* #6b7280 */
+    margin-bottom: 1rem;
+}
+
+.ai-output-area {
+    /* Стилізація області, куди вставляється відповідь ШІ */
+    background-color: #f8fafc;
+    /* Дуже світлий фон для виділення відповіді */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-left: 3px solid #6366f1;
+    /* Вертикальний акцентний блок */
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    /* Покращує читабельність списків */
+    color: var(--color-primary-dark-text);
+}
+
+/* ----- 3. СТИЛІЗАЦІЯ СЕЛЕКТОРА ----- */
+.selection-box {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.selection-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary-indigo);
+}
+
+.selection-dropdown {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background-color: white;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.selection-dropdown:focus {
+    border-color: var(--color-primary-indigo);
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+    outline: none;
+}
+
+/* ----- 4. СТИЛІ КНОПКИ НАСТУПНОГО ЕТАПУ (.next-step-btn) ----- */
+.next-step-btn {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1.5rem;
+    background-color: var(--color-primary-indigo);
+    color: white;
+    font-weight: 700;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s, background-color 0.3s;
+}
+
+.next-step-btn:hover:not(:disabled) {
+    background-color: #4338ca;
+}
+
+/* Стиль для неактивної кнопки (за замовчуванням, поки не обрано ідею) */
+.next-step-btn:disabled {
+    background-color: #9ca3af;
+    /* Сірий колір */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* ----- 5. СТИЛІ ЗАВАНТАЖЕННЯ (.loading-state) ----- */
+.loading-state {
+    text-align: center;
+    padding: 2rem 0;
+    /* Ви можете додати сюди спіннер */
+}
+
+.loading-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-primary-indigo);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
 }
