@@ -430,10 +430,10 @@ li:last-child_ {
     }
 }
 
-/* < !-- Input subsection 1 --> */
+/* < !-- Input subsection --> */
 .input-sub {
-    /* background-color: var(--color-card-bg); */
-    display: flex;
+    background-color: var(--color-card-bg);
+    display: block;
     border-radius: 12px;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
     margin-bottom: 32px;
@@ -449,7 +449,7 @@ li:last-child_ {
 }
 
 .input-img {
-    width: 600px;
+    width: 100%;
     height: auto;
     object-fit: cover;
 }
