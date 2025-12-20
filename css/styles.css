@@ -432,26 +432,33 @@ li:last-child_ {
 
 /* < !-- Input subsection --> */
 .input-sub {
-    background-color: var(--color-card-bg);
-    display: block;
+    display: flex;
+    align-items: center;
     border-radius: 12px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
-    margin-bottom: 32px;
     overflow: hidden;
+    background-color: var(--color-card-bg);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 32px;
+}
 
+.step-card-container {
+    display: none;
 }
 
 .card-body {
+    flex: 1;
     padding: 24px;
-    margin-right: 0;
-    margin-left: 0;
-    align-content: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .input-img {
-    width: 100%;
+    width: 300px;
+    min-width: 250px;
     height: auto;
     object-fit: cover;
+    border-radius: 25px;
 }
 
 .input-title {
@@ -534,6 +541,11 @@ li:last-child_ {
     outline: none;
 }
 
+.final-actions {
+    display: flex;
+    gap: 10px;
+}
+
 .input-sub-btn {
     width: 100%;
     padding: 12px 24px;
@@ -551,6 +563,19 @@ li:last-child_ {
     background-color: var(--bg-color-focus-btn);
     transition: var(--transition);
 }
+
+.input-sub-btn.start {
+    background-color: var(--color-gray-hint);
+}
+
+.input-sub-btn.start:hover,
+.input-sub-btn.start:focus {
+    background-color: var(--bg-color-focus-btn);
+    color: black;
+    transition: var(--transition);
+}
+
+
 
 
 /**

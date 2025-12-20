@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Goal Forge AI</title>
+    <script src="./js/script.js" defer></script>
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="./img/Favicon/Favicon.png">
     <!-- Fonts -->
@@ -93,7 +94,7 @@
             </section>
 
             <!-- Social Proof section -->
-            <section class="social-proof" id="about">
+            <section class="social-proof">
                 <div class="social-proof-container container">
                     <div class="social-proof-container-title">
                         <h2 class="social-proof-title">Goal Achieved: Hear From Our Community</h2>
@@ -203,8 +204,10 @@
                     </div>
                     <!-- Input subsection 1 hidden -->
                     <div class="input-sub step-card-container" id="step-1-card"> <!-- step-card-container -->
-                        <img class="input-img" src="./img/InputSection/Rectangle1.png"
-                            alt="Візуалізація генерації ідей">
+                        <div class="input-sub-box">
+                            <img class="input-img" src="./img/InputSection/Rectangle1.png"
+                                alt="Візуалізація генерації ідей">
+                        </div>
                         <div class="card-body">
                             <h3 class="input-title">1. Idea Forge: Brainstorming Your Options</h3> <!-- card-title -->
                             <div id="step-1-loading" class="loading-state">
@@ -235,8 +238,11 @@
 
                     <!-- Input subsection 2 -->
                     <div class="input-sub step-card-container" id="step-2-card">
-                        <img class="input-img" src="./img/InputSection/Rectangle2.png"
-                            alt="Візуалізація структурування плану">
+                        <div class="input-sub-box">
+                            <img class="input-img" src="./img/InputSection/Rectangle2.png"
+                                alt="Візуалізація структурування плану">
+                        </div>
+
 
                         <div class="card-body">
                             <h3 class="input-title">2. Plan Structure: Architecture of Success</h3>
@@ -247,7 +253,7 @@
 
                             <div id="step-2-content" class="card-content">
                                 <div id="structure-output" class="ai-output-area">
-                                    Тут з'явиться детальна структура вашого плану...
+                                    Тут з'явиться детальна структура плану...
                                 </div>
 
                                 <p class="input-txt">
@@ -266,8 +272,11 @@
 
                     <!-- Input subsection 3 -->
                     <div class="input-sub step-card-container" id="step-3-card">
-                        <img class="input-img" src="./img/InputSection/Rectangle3.png"
-                            alt="Візуалізація деталізації плану">
+                        <div class="input-sub-box">
+                            <img class="input-img" src="./img/InputSection/Rectangle3.png"
+                                alt="Візуалізація деталізації плану">
+                        </div>
+
 
                         <div class="card-body">
                             <h3 class="input-title">3. Deep Detail: Actionable Tasks</h3>
@@ -295,10 +304,12 @@
                     </div>
 
                     <!-- Input subsection 4 -->
-
                     <div class="input-sub step-card-container" id="step-4-card">
-                        <img class="input-img" src="./img/InputSection/Rectangle4.png"
-                            alt="Візуалізація фіналізації плану">
+                        <div class="input-sub-box">
+                            <img class="input-img" src="./img/InputSection/Rectangle4.png"
+                                alt="Візуалізація фіналізації плану">
+                        </div>
+
 
                         <div class="card-body">
                             <h3 class="input-title">4. Finalize & Actualize: Ready for Action</h3>
@@ -309,7 +320,7 @@
 
                             <div id="step-4-content" class="card-content">
                                 <div id="final-output" class="ai-output-area">
-                                    Ваш повний стратегічний план готовий до виконання!
+                                    Тут зявляється повний стратегічний план готовий до виконання!
                                 </div>
 
                                 <p class="input-txt">
@@ -319,12 +330,11 @@
                                     **Download your roadmap or start following the steps now.**
                                 </p>
 
-                                <div class="final-actions" style="display: flex; gap: 10px;">
+                                <div class="final-actions">
                                     <button class="input-sub-btn" id="finish-button" type="button">
                                         Complete & Save Plan
                                     </button>
-                                    <button class="input-sub-btn" id="restart-button" type="button"
-                                        style="background-color: var(--color-gray-hint);">
+                                    <button class="input-sub-btn start" id="restart-button" type="button">
                                         Start New Goal
                                     </button>
                                 </div>
