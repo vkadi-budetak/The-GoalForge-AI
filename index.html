@@ -189,21 +189,26 @@
             <!-- Input section -->
             <section class="input" id="services">
                 <div class="input-container container">
-                    <div class="input-box-form">
+                    <div class="input-box-form" id="step-0-card">
+                        <div class="input-container-box">
+                            <img class="input-motivation-img" src="./img/InputSection/input_section.png"
+                                alt="Мотивація">
+                        </div>
                         <form class="input-form" action="">
                             <label for="user-idea">What is your big goal?</label>
                             <textarea id="user-idea"
                                 placeholder="e.g., 'I want to launch a small online business by March,' or 'I want to master Python programming in 6 months.'"></textarea>
+                               <span id="error-message"></span>
                             <p class="input-text">
                                 Be specific about your desired outcome and timeframe for the best results!
                             </p>
-                            <button class="input-btn" type="button">
+                            <button class="input-btn" type="button" id="user-idea-btn">
                                 1. Forge My Options (Start Brainstorming)
                             </button>
                         </form>
                     </div>
-                    <!-- Input subsection 1 hidden -->
-                    <div class="input-sub step-card-container" id="step-1-card"> <!-- step-card-container -->
+                    <!-- Input subsection 1 -->
+                    <div class="input-sub step-card-container" id="step-1-card">
                         <div class="input-sub-box">
                             <img class="input-img" src="./img/InputSection/Rectangle1.png"
                                 alt="Візуалізація генерації ідей">
@@ -225,6 +230,8 @@
                                         path:</label>
                                     <select id="chosen-idea-select" class="selection-dropdown">
                                         <option value="" disabled selected>— Select an Idea to Structure —</option>
+                                        <option value="1">Test Idea 1</option>
+                                    <option value="2">Test Idea 2</option>
                                     </select>
                                 </div>
                                 <button class="input-sub-btn" id="step-1-button" type="button" disabled>
