@@ -448,7 +448,6 @@ li:last-child_ {
     transition: var(--transition);
 }
 
-/* Адаптивність: Кнопка на десктопі може бути меншою (якщо використовуєте медіазапити) */
 @media (min-width: 768px) {
     .input-btn {
         width: auto;
@@ -466,9 +465,10 @@ li:last-child_ {
     margin-bottom: 32px;
 }
 
-.step-card-container {
-    display: none;
+.is-hidden {
+    display: none !important; 
 }
+
 
 .card-body {
     flex: 1;
@@ -564,6 +564,18 @@ li:last-child_ {
     border-color: var(--color-primary-indigo);
     box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
     outline: none;
+}
+
+.select-error {
+    color: #ff4d4d;
+    font-size: 14px;
+    display: none;
+    margin-top: 5px;
+}
+
+.error-border {
+    border: 2px solid #ff4d4d !important;
+    animation: shake 0.2s ease-in-out 0s 2;
 }
 
 .final-actions {

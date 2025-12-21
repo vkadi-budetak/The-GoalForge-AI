@@ -84,7 +84,7 @@
                             4 focused steps.
                         </p>
                         <p class="hero-subtitle">Ready to forge your goal? Start by telling the AI what you want.</p>
-                        <button class="hero-btn" type="button">Get Started</button>
+                        <button class="hero-btn" id="hero-btn" type="button">Get Started</button>
                     </div>
                     <div class="hero-box-img">
                         <img class="hero-img" src="/img/Hero/image1.png" alt="picture kart">
@@ -208,17 +208,17 @@
                         </form>
                     </div>
                     <!-- Input subsection 1 -->
-                    <div class="input-sub step-card-container" id="step-1-card">
+                    <div class="input-sub step-card-container is-hidden " id="step-1-card">
                         <div class="input-sub-box">
                             <img class="input-img" src="./img/InputSection/Rectangle1.png"
                                 alt="Візуалізація генерації ідей">
                         </div>
                         <div class="card-body">
                             <h3 class="input-title">1. Idea Forge: Brainstorming Your Options</h3> <!-- card-title -->
-                            <div id="step-1-loading" class="loading-state">
+                            <div id="step-1-loading" class="loading-state is-hidden">
                                 <p class="loading-text">Forging 5 unique paths for your goal...</p>
                             </div>
-                            <div id="step-1-content" class="card-content">
+                            <div id="step-1-content" class="card-content is-hidden">
                                 <div id="idea-list-output" class="ai-output-area">Відповідь Ші</div>
                                 <p class="input-txt">
                                     The AI has successfully applied creative synthesis to generate distinct approaches.
@@ -233,8 +233,9 @@
                                         <option value="1">Test Idea 1</option>
                                     <option value="2">Test Idea 2</option>
                                     </select>
+                                    <span id="select-error" class="select-error ">Please select an option</span>
                                 </div>
-                                <button class="input-sub-btn" id="step-1-button" type="button" disabled>
+                                <button class="input-sub-btn" id="step-1-button" type="button">
                                     2. Structure This Plan (Proceed to Step 2)
                                 </button>
                             </div>
@@ -244,7 +245,7 @@
 
 
                     <!-- Input subsection 2 -->
-                    <div class="input-sub step-card-container" id="step-2-card">
+                    <div class="input-sub step-card-container is-hidden" id="step-2-card">
                         <div class="input-sub-box">
                             <img class="input-img" src="./img/InputSection/Rectangle2.png"
                                 alt="Візуалізація структурування плану">
@@ -278,7 +279,7 @@
 
 
                     <!-- Input subsection 3 -->
-                    <div class="input-sub step-card-container" id="step-3-card">
+                    <div class="input-sub step-card-container is-hidden" id="step-3-card">
                         <div class="input-sub-box">
                             <img class="input-img" src="./img/InputSection/Rectangle3.png"
                                 alt="Візуалізація деталізації плану">
@@ -311,7 +312,7 @@
                     </div>
 
                     <!-- Input subsection 4 -->
-                    <div class="input-sub step-card-container" id="step-4-card">
+                    <div class="input-sub step-card-container is-hidden " id="step-4-card">
                         <div class="input-sub-box">
                             <img class="input-img" src="./img/InputSection/Rectangle4.png"
                                 alt="Візуалізація фіналізації плану">
