@@ -348,13 +348,17 @@ li:last-child_ {
 }
 
 .step.active .step-circle {
-    background-color: var(--color-primary-indigo);
+    color: white;
+    background-color: #10b981;
 }
 
 .step.active .step-label {
-    color: var(--color-primary-dark-text);
+    /* color: var(--color-primary-dark-text); */
     font-weight: 600;
+    font-size: 13px;
+    color: #10b981;
 }
+
 
 /**
   |============================
