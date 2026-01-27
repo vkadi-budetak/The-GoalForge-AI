@@ -27,47 +27,24 @@
         <header class="header">
             <div class="header-container container">
 
-                <div class="header-container-nav">
-                    <nav class="header-nav">
-                        <ul class="header-nav-list list">
-                            <li class="header-nav-item"><a class="header-nav-link link change" href="#hero">Hero</a>
-                            </li>
-                            <li class="header-nav-item"><a class="header-nav-link link change" href="#about">About</a>
-                            </li>
-                            <li class="header-nav-item"><a class="header-nav-link link change"
-                                    href="#services">Services</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-
                 <div class="header-logo">
                     <a class="header-logo-link link" href="">
                         <img class="header-logo-img" src="./img/logo.png" alt="Logo" width="100px" height="100px">
                     </a>
                 </div>
 
-                <div class="header-shoplink">
-                    <ul class="header-shoplink-list list">
-                        <li class="header-shoplink-item">
-                            <a class="header-shoplink-link link" href="./" target="_blank" rel="noopener noreferrer"
-                                aria-label="search icon">
-                                <svg class="header-shoplink-svg" width="21px" height="21px">
-                                    <use href="../img/search_icon.svg"></use>
-                                </svg>
-                            </a>
+                <div class="header-container-nav">
+                    <nav class="header-nav">
+                        <a href="#how-it-works" class="nav-link link">Process</a>
+                        <a href="#services" class="nav-link link">Create Goal</a>
+                        <a href="#reviews" class="nav-link link">Success Stories</a>
+                    </nav>
+                </div>
 
-                        </li>
-                        <li class="header-shoplink-item">
-                            <a class="header-shoplink-link link" href="./" target="_blank" rel="noopener noreferrer"
-                                aria-label="shop icon">
-                                <svg class="header-shoplink-svg" width="21px" height="21px">
-                                    <use href="./img/shop_icon.svg"></use>
-                                </svg>
 
-                            </a>
-                        </li>
-                    </ul>
+                <div class="header-actions">
+                    <button id="theme-btn" class="theme-toggle">🌙</button>
+                    <a href="#services" class="header-btn">Forge Now</a>
                 </div>
 
             </div>
@@ -75,7 +52,7 @@
         <main>
 
             <!-- Hero section -->
-            <section class="hero" id="hero">
+            <section class="hero" id="how-it-works">
                 <div class="hero-container container">
                     <div class="hero-box">
                         <h1 class="hero-title">Turn your biggest 'I want...' into a powerful action plan.</h1>
@@ -94,7 +71,7 @@
             </section>
 
             <!-- Social Proof section -->
-            <section class="social-proof">
+            <section class="social-proof" id="reviews">
                 <div class="social-proof-container container">
                     <div class="social-proof-container-title">
                         <h2 class="social-proof-title">Goal Achieved: Hear From Our Community</h2>
@@ -198,7 +175,7 @@
                             <label for="user-idea">What is your big goal?</label>
                             <textarea id="user-idea"
                                 placeholder="e.g., 'I want to launch a small online business by March,' or 'I want to master Python programming in 6 months.'"></textarea>
-                               <span id="error-message"></span>
+                            <span id="error-message"></span>
                             <p class="input-text">
                                 Be specific about your desired outcome and timeframe for the best results!
                             </p>
@@ -231,7 +208,7 @@
                                     <select id="chosen-idea-select" class="selection-dropdown">
                                         <option value="" disabled selected>— Select an Idea to Structure —</option>
                                         <option value="1">Test Idea 1</option>
-                                    <option value="2">Test Idea 2</option>
+                                        <option value="2">Test Idea 2</option>
                                     </select>
                                     <span id="select-error" class="select-error ">Please select an option</span>
                                 </div>

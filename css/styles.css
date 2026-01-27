@@ -11,7 +11,7 @@
     /* Bg colors */
     --bg-color-fon: #F0EFEB;
     --bg-color-btn: #000000;
-    --bg-color-focus-btn: rgb(93, 49, 187);
+    --bg-color-focus-btn: #32aae3;
     --bg-color-footer: #020202;
 
     /* Colors indigo */
@@ -129,35 +129,101 @@ li:last-child_ {
   | Header section
   |============================
 */
+.header {
+    position: fixed;
+    /* Робимо його липким */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* Контейнер для вирівнювання */
 .header-container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    padding: 8px;
-    height: 68px;
-    font-size: 16px;
 }
 
-.header-nav-list {
+.header-logo-img {
+    transition: transform 0.3s ease;
+}
+
+.header-logo-img:hover {
+    transform: scale(1.05);
+}
+
+.header-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #4b5563;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--bg-color-focus-btn);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--bg-color-focus-btn);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.header-actions {
     display: flex;
     align-items: center;
     gap: 16px;
+}
+
+.theme-toggle {
+    background: none;
+    border: 1px solid #e5e7eb;
     padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
 }
 
-.header-shoplink-list {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 8px;
+.theme-toggle:hover {
+    background: #f3f4f6;
+
 }
 
-.header-shoplink-svg:hover,
-.header-shoplink-svg:focus {
-    fill: var(--bg-color-focus-btn);
-    transition: fill 0.3s;
+.header-btn {
+    padding: 10px 20px;
+    background-color: var(--color-primary-indigo);
+    color: white !important;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease;
 }
 
+.header-btn:hover {
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
 
 /**
   |============================
@@ -166,6 +232,7 @@ li:last-child_ {
 */
 .hero {
     background-color: var(--bg-color-fon);
+    padding-top: 100px;
 }
 
 .hero-container {
@@ -404,15 +471,26 @@ li:last-child_ {
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  75% { transform: translateX(5px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
 }
 
 #user-idea.error-border {
     border-color: #ff4d4d;
     box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.2);
-    animation: shake 0.2s ease-in-out 0s 2; /* Трясеться 0.2 сек, двічі */
+    animation: shake 0.2s ease-in-out 0s 2;
+    /* Трясеться 0.2 сек, двічі */
 }
 
 #user-idea.error-border:focus {
@@ -422,8 +500,8 @@ li:last-child_ {
 
 #error-message {
     color: #ff4d4d;
-    font-size: 14px; 
-    display: none; 
+    font-size: 14px;
+    display: none;
     margin-top: 5px;
 }
 
@@ -470,7 +548,7 @@ li:last-child_ {
 }
 
 .is-hidden {
-    display: none !important; 
+    display: none !important;
 }
 
 
@@ -675,6 +753,9 @@ li:last-child_ {
 .footer-pub-item {
     font-size: 14px;
     padding: 6px;
+    font-weight: 500;
+    color: #4b5563;
+    transition: color 0.3s ease;
 }
 
 
