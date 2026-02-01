@@ -2,15 +2,13 @@
     --primary-font: 'Roboto', sans-serif;
 
     /* Text colors */
-    --main-txt-cl: #000000;
-    --footer-txt-cl: #ffffff;
-    --btn-txt-cl: #ffffff;
+    --clr-black: #000000;
+    --clr-white: #ffffff;
     --color-primary-dark-text: #1f2937;
     --color-light-accent: #e5e4e2;
 
     /* Bg colors */
     --bg-color-fon: #F0EFEB;
-    --bg-color-btn: #000000;
     --bg-color-focus-btn: #32aae3;
     --bg-color-footer: #020202;
 
@@ -19,12 +17,20 @@
     --color-gray-hint: #6b7280;
 
     /* Colors Input subsection*/
-    --color-primary-dark-text: #1f2937;
-    --color-card-bg: #ffffff;
     --color-ai-output-bg: #f8fafc;
 
     /* Other */
     --transition: background-color 0.5s;
+
+}
+
+/* Colors for Dark Theme */
+[data-theme="dark"] {
+    /* Dark Theme Override */
+    --bg-color: #0f172a;
+    --text-color: #f1f5f9;
+    --card-bg: #1e293b;
+    --header-bg: rgba(15, 23, 42, 0.8);
 }
 
 /* Base styles */
@@ -32,12 +38,20 @@ html {
     box-sizing: border-box;
 }
 
+
+
 body {
     font-family: var(--primary-font);
     font-size: 20px;
     line-height: 1.67;
     letter-spacing: 0.02em;
-    color: var(--main-txt-cl);
+    color: var(--clr-black);
+
+
+    /* Colors for Dark Theme */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Reset Star */
@@ -141,9 +155,11 @@ li:last-child_ {
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(229, 231, 235, 0.5);
     transition: all 0.3s ease;
+
+    /* Colors for Dark Theme */
+    background-color: var(--header-bg) !important;
 }
 
-/* Контейнер для вирівнювання */
 .header-container {
     display: flex;
     align-items: center;
@@ -233,6 +249,9 @@ li:last-child_ {
 .hero {
     background-color: var(--bg-color-fon);
     padding-top: 100px;
+
+    /* Colors for Dark Theme */
+    color: #000000 !important;
 }
 
 .hero-container {
@@ -264,8 +283,8 @@ li:last-child_ {
     margin-top: 16px;
     padding: 8px;
     border-radius: 50% 20% / 10% 40%;
-    background-color: var(--bg-color-btn);
-    color: var(--btn-txt-cl);
+    background-color: var(--clr-black);
+    color: var(--clr-white);
     border: 1px solid var(--bg-color-fon);
 }
 
@@ -274,7 +293,7 @@ li:last-child_ {
     border-radius: 50% 20% / 10% 40%;
     border: 1px solid var(--bg-color-fon);
     background-color: var(--bg-color-focus-btn);
-    color: var(--main-txt-cl);
+    color: var(--clr-black);
     transition: var(--transition);
 }
 
@@ -542,7 +561,7 @@ li:last-child_ {
     align-items: center;
     border-radius: 12px;
     overflow: hidden;
-    background-color: var(--color-card-bg);
+    background-color: var(--clr-white);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     margin-bottom: 32px;
 }
@@ -608,7 +627,7 @@ li:last-child_ {
     background-color: var(--color-ai-output-bg);
     padding: 16px;
     border-radius: 8px;
-    border-left: 3px solid var(--color-card-bg);
+    border-left: 3px solid var(--clr-white);
     margin-bottom: 16px;
     line-height: 1.6;
     color: var(--color-primary-dark-text);
@@ -695,6 +714,75 @@ li:last-child_ {
 }
 
 
+/* Контейнер повідомлення про помилку */
+.ai-error-container {
+    padding: 20px;
+    margin: 15px 0;
+    text-align: center;
+    border: 2px dashed #ff4d4d;
+    border-radius: 12px;
+    background-color: rgba(255, 77, 77, 0.05);
+    animation: fadeInError 0.4s ease-out;
+}
+
+.ai-error-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.ai-error-title {
+    color: #ff4d4d;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.ai-error-text {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.retry-btn {
+    background-color: #ff4d4d;
+    /* Можеш змінити на var(--accent), якщо хочеш колір сайту */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(255, 77, 77, 0.2);
+}
+
+.retry-btn:hover {
+    background-color: #e64040;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 77, 77, 0.3);
+}
+
+.retry-btn:active {
+    transform: translateY(0);
+}
+
+@keyframes fadeInError {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
 
 
 /**
@@ -709,7 +797,7 @@ li:last-child_ {
 }
 
 .footer-container {
-    color: var(--footer-txt-cl);
+    color: var(--clr-white);
 }
 
 .footer-box {
