@@ -4,13 +4,11 @@
   |============================
 */
 
-// 1. ДАНІ КОРИСТУВАЧА
 const userData = {
   goal: "",
   selectedIdea: "",
 };
 
-// 2. ЕЛЕМЕНТИ ТА КАРТКИ
 const userIdeaInput = document.getElementById("user-idea");
 const errorMessage = document.getElementById("error-message");
 const btnUserIdea = document.getElementById("user-idea-btn");
@@ -44,7 +42,6 @@ const errorBlocks = {
   4: document.getElementById("step-4-error"),
 };
 
-// 3. ДОПОМІЖНІ ФУНКЦІЇ
 function typeWriter(element, text, speed = 15) {
   element.innerHTML = "";
   let i = 0;
@@ -58,9 +55,7 @@ function typeWriter(element, text, speed = 15) {
   type();
 }
 
-// 4. ГОЛОВНА УНІВЕРСАЛЬНА ФУНКЦІЯ
 function showStep(stepNumber) {
-  // Ховаємо ВСЕ перед новим кроком
   Object.values(cards).forEach((card) => card.classList.add("is-hidden"));
   Object.values(loaders).forEach((loader) =>
     loader?.classList.add("is-hidden"),
@@ -94,7 +89,6 @@ function showStep(stepNumber) {
       prompt = `Professional summary for: "${userData.goal}" using strategy "${userData.selectedIdea}". Max 80 words.`;
     }
 
-    // ВИКЛИК ШІ З ПОДВІЙНИМ ЗАХИСТОМ
     askGemini(prompt)
       .then((aiResponse) => {
         loaders[stepNumber].classList.add("is-hidden");
@@ -125,12 +119,10 @@ function showStep(stepNumber) {
             typeWriter(outputElement, cleanText);
           }
         } else {
-          // Обробка логічного null (наприклад, статус 500 чи 404)
           errorBlocks[stepNumber]?.classList.remove("is-hidden");
         }
       })
       .catch((err) => {
-        // Обробка критичних помилок (Offline, Failed to fetch)
         console.error("Critical Error:", err);
         loaders[stepNumber].classList.add("is-hidden");
         errorBlocks[stepNumber]?.classList.remove("is-hidden");
@@ -142,7 +134,6 @@ function showStep(stepNumber) {
   }
 }
 
-// 5. ОБРОБНИКИ КНОПОК (Тут все без змін)
 btnUserIdea.addEventListener("click", () => {
   const text = userIdeaInput.value.trim();
   if (!text || text.length < 10 || /^\d+$/.test(text)) {
