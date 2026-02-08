@@ -10,6 +10,7 @@
     <script src="./js/input-section.js" defer></script>
     <script src="./js/indicator-section.js" defer></script>
     <script src="./js/dark-theme.js" defer></script>
+    <script src="./js/sign-in.js" defer></script>
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="./img/Favicon/Favicon.png">
     <!-- Fonts -->
@@ -49,7 +50,7 @@
 
                 <div class="header-actions">
                     <button id="theme-btn" class="theme-toggle">🌙</button>
-                    <a href="#services" class="header-btn">Forge Now</a>
+                    <button id="header-btn" type="button" class="header-btn">Sign In</button>
                 </div>
 
             </div>
@@ -430,6 +431,81 @@
             </div>
         </footer>
     </div>
+
+    <!-- Sign In -->
+    <div id="auth-modal-overlay" class="modal-overlay is-hidden">
+        <div class="auth-card">
+            <button id="close-modal" class="auth-close-btn" type="button">&times;</button>
+
+            <div class="auth-card-bg"></div>
+
+            <div class="auth-hero auth-hero-signup active">
+                <h2 class="auth-hero-title">Nice to see you again!</h2>
+                <p class="auth-hero-text">Sign in to review your latest profit from investments.</p>
+                <button type="button" class="auth-hero-btn" onclick="toggleView()">SIGN IN</button>
+            </div>
+
+            <div class="auth-form-container auth-form-signup active">
+                <h2 class="auth-form-title">Get started</h2>
+                <div class="auth-sso">
+                    <a href="#" title="facebook" class="auth-sso-link" target="_blank" rel="noopener noreferrer"
+                        aria-label="facebook icon"><svg class="" width="21px" height="21px">
+                            <use href="./img/signin/facebook_signin.svg"></use>
+                        </svg></a>
+
+                    <a href="#" title="twitter" class="auth-sso-link" target="_blank" rel="noopener noreferrer"
+                        aria-label="twitter icon"><svg class="" width="21px" height="21px">
+                            <use href="./img/signin/Twitter_icon_sigin.svg"></use>
+                        </svg></a>
+
+                    <a href="#" title="linkedin" class="auth-sso-link" target="_blank" rel="noopener noreferrer"
+                        aria-label="linkedin icon"><svg class="" width="21px" height="21px">
+                            <use href="./img/signin/in_linked_sigin.svg"></use>
+                        </svg></a>
+                </div>
+                <p class="auth-form-subtitle">Or use your email address</p>
+                <form class="auth-form-element">
+                    <input type="email" class="auth-input" placeholder="Email address" required />
+                    <input type="text" class="auth-input" placeholder="Name " required />
+                    <input type="password" class="auth-input" placeholder="Password" required />
+                    <button type="submit" class="auth-submit-btn">SIGN UP</button>
+                </form>
+            </div>
+            <div class="auth-hero auth-hero-signin">
+                <h2 class="auth-hero-title">Join now!</h2>
+                <p class="auth-hero-text">Begin your journey using this software, and start earning now.</p>
+                <button type="button" class="auth-hero-btn" onclick="toggleView()">SIGN UP</button>
+            </div>
+
+            <div class="auth-form-container auth-form-signin">
+                <h2 class="auth-form-title">Sign In</h2>
+                <div class="auth-sso">
+                    <a href="#" title="facebook" class="auth-sso-link fa-brands fa-facebook" target="_blank"
+                        rel="noopener noreferrer" aria-label="facebook icon"><svg class="" width="21px" height="21px">
+                            <use href="./img/signin/facebook_signin.svg"></use>
+                        </svg></a>
+
+                    <a href="#" title="twitter" class="auth-sso-link fa-brands fa-twitter" target="_blank"
+                        rel="noopener noreferrer" aria-label="twitter icon"><svg class="" width="21px" height="21px">
+                            <use href="./img/signin/Twitter_icon_sigin.svg"></use>
+                        </svg></a>
+
+                    <a href="#" title="linkedin" class="auth-sso-link fa-brands fa-linkedin" target="_blank"
+                        rel="noopener noreferrer" aria-label="linkedin icon"><svg class="" width="21px" height="21px">
+                            <use href="./img/signin/in_linked_sigin.svg"></use>
+                        </svg></a>
+                </div>
+                <p class="auth-form-subtitle">Or use your email address</p>
+                <form class="auth-form-element">
+                    <input type="email" class="auth-input" placeholder="Email address" required />
+                    <input type="password" class="auth-input" placeholder="Password" required />
+                    <a href="/" class="auth-forgot-link">Forgot password?</a>
+                    <button type="submit" class="auth-submit-btn">SIGN IN</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
