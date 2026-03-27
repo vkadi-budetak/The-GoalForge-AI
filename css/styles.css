@@ -145,7 +145,6 @@ li:last-child_ {
 */
 .header {
     position: fixed;
-    /* Робимо його липким */
     top: 0;
     left: 0;
     width: 100%;
@@ -714,7 +713,6 @@ li:last-child_ {
 }
 
 
-/* Контейнер повідомлення про помилку */
 .ai-error-container {
     padding: 20px;
     margin: 15px 0;
@@ -746,7 +744,6 @@ li:last-child_ {
 
 .retry-btn {
     background-color: #ff4d4d;
-    /* Можеш змінити на var(--accent), якщо хочеш колір сайту */
     color: white;
     border: none;
     padding: 12px 25px;
